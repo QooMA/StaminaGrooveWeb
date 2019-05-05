@@ -27,8 +27,8 @@ workflows:
     jobs: # 無料プランであるためジョブが同時実行できない。そのため、明示的にシーケンシャルに実行順序を指定する。
       - build
       - lint
-        requires:
-          - build
+          requires:
+            - build
       - test
-        requires:
-          - lint
+          requires:
+            - lint
